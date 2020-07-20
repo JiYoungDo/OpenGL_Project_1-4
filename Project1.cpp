@@ -6,17 +6,7 @@
 
 GLboolean IsWire = true;
 GLboolean IsSolid = true;
-int ViewX = 0, ViewY = 0;				// ¸¶¿ì½º ¿òÁ÷ÀÓ¿¡ µû¶ó ½ÃÁ¡À» ¹Ù²Ù±â À§ÇÑ º¯¼ö
-
-/*
-GLfloat MyVertices[8][3] = { {-0.5,-0.35,0.25}, {-0.5,-0.15,0.25},{0.5,-0.15,0.25},{0.5,-0.35,0.25},
-							{-0.5,-0.35,-0.25},{-0.5,-0.15,-0.25},{0.5,-0.15,-0.25},{0.5,-0.35,-0.25} };
-
-GLfloat LegsVertices01[8][3] = { {-0.5,-1.35,0.25},{-0.5,-0.35,0.25},{-0.4,-0.35,0.25 },{-0.4,-1.35,0.25},
-									{-0.5,-1.35,0.15},{-0.5,-0.35,0.15},{-0.4,-0.35,0.15 },{-0.4,-1.35,0.15}};
-
-GLfloat MyColor[3] = {0.58, 0.29, 0}; 
-GLubyte MyVertexList[24] = { 0,3,2,1, 2,3,7,6, 0,4,7,3, 1,2,6,5, 4,5,6,7, 0,1,5,4 };*/
+int ViewX = 0, ViewY = 0;				// ë§ˆìš°ìŠ¤ ì›€ì§ì„ì— ë”°ë¼ ì‹œì ì„ ë°”ê¾¸ê¸° ìœ„í•œ ë³€ìˆ˜
 
 void InitLight()
 {
@@ -58,25 +48,11 @@ void MyDisplay()
 	int X = ((ViewX) - (WIDTH / 2));
 	int Y = -((ViewY) - (HEIGHT / 2));
 	
-	
-	// glFrontFace(GL_CCW);
-	// glEnable(GL_CULL_FACE);
-	// glEnableClientState(GL_COLOR_ARRAY);
-	// glEnableClientState(GL_VERTEX_ARRAY);
-	// glVertexPointer(3, GL_FLOAT, 0, LegsVertices01);
-	// glVertexPointer(3, GL_FLOAT, 0, MyVertices);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 
 	gluLookAt(0.0, 0.0, 0.0, X, Y, -1.0, 0.0, 1.0, 0.0);
-
-	/*for (GLint i = 0; i < 6; i++)
-	{
-		glDrawElements(GL_POLYGON, 4, GL_UNSIGNED_BYTE, &MyVertexList[4 * i]);
-
-	}*/
-
 
 
 	if (IsWire)
