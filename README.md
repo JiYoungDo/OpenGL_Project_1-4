@@ -1,4 +1,4 @@
-# OpenGL_Project_1-4
+# OpenGL
 
 ● 프로젝트 1
 목표
